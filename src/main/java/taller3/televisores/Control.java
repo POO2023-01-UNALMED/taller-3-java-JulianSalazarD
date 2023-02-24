@@ -30,8 +30,12 @@ public class Control {
         tv.volumenDown();
     }
 
-    public void Enlazar(TV tv){
+    public void enlazar(TV tv){
         this.tv = tv;
         this.tv.setControl(this);
+    }
+
+    public void setCanal(int i) {
+        tv.setCanal(i);
     }
 }

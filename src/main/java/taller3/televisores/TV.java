@@ -17,6 +17,10 @@ public class TV {
         this.estado = estado;
     }
 
+    public static int getNumTV() {
+        return numTV;
+    }
+
     public Marca getMarca() {
         return marca;
     }
@@ -30,7 +34,9 @@ public class TV {
     }
 
     public void setCanal(int canal) {
-        this.canal = canal;
+        if (canal >= 0 && canal <= 120 && getEstado()) {
+            this.canal = canal;
+        }
     }
 
     public int getPrecio() {
@@ -57,8 +63,8 @@ public class TV {
         Control = control;
     }
 
-    public void setNumTV() {
-        numTV++;
+    public static void setNumTV(int i) {
+        numTV ++;
     }
     public boolean getEstado() {
         return estado;
